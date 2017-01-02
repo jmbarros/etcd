@@ -1,0 +1,22 @@
+#install.yml
+---
+  - name: installing etcd
+    yum: name={{ item }} state=installed
+    with_items:     
+    - etcd
+    #client
+    #- golang
+    #- git
+    # go get github.com/coreos/etcd/client
+
+  - name: copyng etcd.conf
+    copy:
+      src: "../files/etcd.conf"
+      dest: "/etc/etcd/etcd.conf"
+      owner: root
+      group: root
+      mode: 0644
+
+  - name: reloading etcd
+    service: name=etcd state=restarted enabled=yes
+

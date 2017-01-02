@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: Joao Marcelo Barros
+  description: Simple ETCD (RHEL/CentOS)
+  license: BSD
+  min_ansible_version: 1.9
+  platforms:
+  - name: EL
+    versions:
+    - 7
+  galaxy_tags:
+  - install
+  - services
+  - ETCD
