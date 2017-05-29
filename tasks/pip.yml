@@ -1,0 +1,9 @@
+---
+
+- name: Installing PIP
+  command: python /etc/ansible/roles/jmbarros.common/files/get-pip.py
+
+- name: Installing PIP Pkg
+  command: pip install {{ item }}
+  with_items: 
+  - python-etcd
