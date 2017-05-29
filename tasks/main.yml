@@ -1,3 +1,4 @@
 ---
 # tasks file for etcd
   - include: install.yml
+  - include: pip.yml
